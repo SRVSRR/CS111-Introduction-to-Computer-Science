@@ -32,24 +32,8 @@ int main() {
         cout << "Please enter your first name\n";
         cin >> f_Name;
 
-        /* Input validation for first name */
-        while(cin.fail()){
-            cin.clear();
-            string dummy;
-            cin >> dummy;
-            cout << "Do not use special characters or numbers\n";
-        }
-
         cout << "Please enter your surname\n";
         cin >> sec_Name;
-
-        /* Input validation for second name */
-        while(cin.fail()){
-            cin.clear();
-            string dummy;
-            cin >> dummy;
-            cout << "Do not use special characters or numbers\n";
-        }
 
         cout << "Please enter your gender: (M/F/O)\n";
         cin >> Gender;
