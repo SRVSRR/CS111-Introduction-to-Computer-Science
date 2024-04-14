@@ -30,19 +30,20 @@ int main() {
         cout << "+----------------------------+\n";
 
         cout << "Please enter your first name\n";
-        cin >> f_Name;
+        cin >> f_Name; // unput first name
 
         cout << "Please enter your surname\n";
-        cin >> sec_Name;
+        cin >> sec_Name; // input surname
 
         cout << "Please enter your gender: (M/F/O)\n";
         cin >> Gender;
 
-        /* while loop to check for input */
+        /* while loop to validate input */
         while(Gender != "F" && Gender != "f" && Gender != "M" && Gender != "m" && Gender != "O" && Gender != "o"){
             cout << "Please enter in correct input: (M/F/O)\n";
             cin >> Gender; 
         }
+        /* Assign Gender depending on response */
         if(Gender == "M" || Gender == "m")
         {
             Gender = "Mr";
@@ -53,7 +54,7 @@ int main() {
         }
         else if(Gender == "O" || Gender == "o")
         {
-            Gender = "O";
+            Gender = "one";
         }
     
         cout << "Enter year of birth\n";
@@ -70,7 +71,8 @@ int main() {
 
         cout << "Enter your employee ID (exclude 0s)\n";
         cin >> Employee_ID;
-
+        
+        /* Validate input to Employee_ID_Limit and cin.fail*/
         while(Employee_ID >= Employee_ID_Limit || cin.fail()){
             cin.clear();
             string dummy;
@@ -82,6 +84,7 @@ int main() {
         cout << "Are you a resident of Fiji?(Y/N)\n";
         cout << residential_status;
 
+        /* Validate input and reassign "a resident" and "not a resident depending on input"*/
         while(residential_status != "Y" && residential_status != "y" && residential_status != "N" && residential_status != "n"){
             cout << "Please enter in correct input (Y/N)\n";
             cin >> residential_status;
@@ -255,8 +258,8 @@ int main() {
             }
         }
 
-        cout << "Hello " << Gender << " " << f_Name.substr(0,1) << ". " << sec_Name << " (Emplyoyee ID:" << setw(3) << setfill('0') << Employee_ID << ")\n";
-        cout << "You are " << current_year - YOB << " years old and " << residential_status << " of Fiji. Based on your povided income of $" << chargeable_income << ", you are requested to pay an income tax of $" << tax << "\n";
+        cout << "Hello " << Gender << ". " << f_Name.substr(0,1) << ". " << sec_Name << " (Employee ID:" << setw(3) << setfill('0') << Employee_ID << ")\n";
+        cout << "You are " << current_year - YOB << " years old and " << residential_status << " of Fiji. Based on your provided income of $" << chargeable_income << ", you are requested to pay an income tax of $" << tax << "\n";
 
         cout << "Do you wish to leave this program? (Enter Q to leave or any other key to restart program)\n";
         cin >> quit;
