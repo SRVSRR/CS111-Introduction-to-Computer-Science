@@ -1,4 +1,4 @@
-    // "If you think it's simple, then you have misunderstood the problem." - Bjarne Stroustrup
+// "If you think it's simple, then you have misunderstood the problem." - Bjarne Stroustrup
     
 #include <iostream>
 using namespace std;
