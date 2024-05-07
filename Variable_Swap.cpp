@@ -8,6 +8,7 @@ int main(){
     int b = 3;
     int temp;
 
+    temp = a;
     a = b;
     b = temp;
 
