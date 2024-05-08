@@ -1,4 +1,3 @@
-<div align ="center">
-  <a href="https://www.linkedin.com/in/rohan-n-3a83b5287/" target="_blank">
-    <img src="https://postimg.cc/HJ0t7SKr" height="25" alt="CS111 Banner"  />
-  </a>
+![Cs111](https://github.com/SRVSRR/CS111/assets/135499024/cfb587da-cbb3-409a-a86e-f520656f9742)
+### CS111 Labs, Pass and Tests
+This repository contains every lab tutorial class, lab test, pass session and assignment i've completed in my first year of university.
