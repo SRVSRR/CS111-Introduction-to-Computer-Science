@@ -106,12 +106,12 @@ int main() {
         cin >> chargeable_income;
 
         /*  const tax brackets  */
-        const int bracket1_Min = 0;
-        const int bracket1_Max = 30000;
-        const int bracket2_Min = 30001;
-        const int bracket2_Max = 50000;
-        const int bracket3_Min = 50001;
-        const int bracket3_Max = 270000;
+        const int BRACKET1_MIN = 0; 
+        const int BRACKET1_MAX = 30000;
+        const int BRACKET2_MIN = 30001;
+        const int BRACKET2_MAX = 50000;
+        const int BRACKET3_MIN = 50001;
+        const int BRACKET3_MAX = 270000;
         const int bracket4_Min = 270001;  
         const int bracket4_Max = 300000;
         const int bracket5_Min = 300001;  
@@ -159,10 +159,10 @@ int main() {
         const int nonresident_tax_amount10 = 324900;
 
         /*  Tax calculations for residents  */
-        const double residental_tax1 = (chargeable_income - bracket1_Min);
-        const double residental_tax2 = (chargeable_income - bracket1_Max) * residential_taxexcess_percentages2;
-        const double residental_tax3 = (chargeable_income - bracket2_Max) * residential_taxexcess_percentages3 + resident_tax_amount3 ;
-        const double residental_tax4 = (chargeable_income - bracket3_Max) * residential_taxexcess_percentages4 + resident_tax_amount4;
+        const double residental_tax1 = (chargeable_income - BRACKET1_MIN);
+        const double residental_tax2 = (chargeable_income - BRACKET1_MAX) * residential_taxexcess_percentages2;
+        const double residental_tax3 = (chargeable_income - BRACKET2_MAX) * residential_taxexcess_percentages3 + resident_tax_amount3 ;
+        const double residental_tax4 = (chargeable_income - BRACKET3_MAX) * residential_taxexcess_percentages4 + resident_tax_amount4;
         const double residental_tax5 = (chargeable_income - bracket4_Max) * residential_taxexcess_percentages5 + resident_tax_amount5;
         const double residental_tax6 = (chargeable_income - bracket5_Max) * residential_taxexcess_percentages6 + resident_tax_amount6; 
         const double residental_tax7 = (chargeable_income - bracket6_Max) * residential_taxexcess_percentages7 + resident_tax_amount7;
@@ -171,10 +171,10 @@ int main() {
         const double residental_tax10 = (chargeable_income - bracket9_Max) * residential_taxexcess_percentages10 + resident_tax_amount10;
 
         /*  Tax calculations for non residents  */
-        const double nonresidental_tax1 = (chargeable_income - bracket1_Min) * residential_taxexcess_percentages3;
-        const double nonresidental_tax2 = (chargeable_income - bracket1_Max) * residential_taxexcess_percentages3 + nonresident_tax_amount2;
-        const double nonresidental_tax3 = (chargeable_income - bracket2_Max) * residential_taxexcess_percentages3 + nonresident_tax_amount3;
-        const double nonresidental_tax4 = (chargeable_income - bracket3_Max) * residential_taxexcess_percentages4 + nonresident_tax_amount4;
+        const double nonresidental_tax1 = (chargeable_income - BRACKET1_MIN) * residential_taxexcess_percentages3;
+        const double nonresidental_tax2 = (chargeable_income - BRACKET1_MAX) * residential_taxexcess_percentages3 + nonresident_tax_amount2;
+        const double nonresidental_tax3 = (chargeable_income - BRACKET2_MAX) * residential_taxexcess_percentages3 + nonresident_tax_amount3;
+        const double nonresidental_tax4 = (chargeable_income - BRACKET3_MAX) * residential_taxexcess_percentages4 + nonresident_tax_amount4;
         const double nonresidental_tax5 = (chargeable_income - bracket4_Max) * residential_taxexcess_percentages5 + nonresident_tax_amount5;
         const double nonresidental_tax6 = (chargeable_income - bracket5_Max) * residential_taxexcess_percentages6 + nonresident_tax_amount6; 
         const double nonresidental_tax7 = (chargeable_income - bracket6_Max) * residential_taxexcess_percentages7 + nonresident_tax_amount7;
@@ -184,7 +184,7 @@ int main() {
 
         double tax;
 
-        while(chargeable_income <= bracket1_Min || cin.fail()){
+        while(chargeable_income <= BRACKET1_MIN || cin.fail()){
             cin.clear();
             string dummy;
             cin >> dummy;
@@ -193,13 +193,13 @@ int main() {
         }
 
         if(residential_status == "a resident"){ // using response for if statement
-            if(chargeable_income <= bracket1_Max && chargeable_income >= bracket1_Min){
+            if(chargeable_income <= BRACKET1_MAX && chargeable_income >= BRACKET1_MIN){
                 tax = residental_tax1;
 
-            }else if(chargeable_income <= bracket2_Max && chargeable_income >= bracket2_Min){
+            }else if(chargeable_income <= BRACKET2_MAX && chargeable_income >= BRACKET2_MIN){
                 tax = residental_tax2;;
 
-            }else if(chargeable_income <= bracket3_Max && chargeable_income >= bracket3_Min){
+            }else if(chargeable_income <= BRACKET3_MAX && chargeable_income >= BRACKET3_MIN){
                 tax = residental_tax3;
 
             }else if(chargeable_income <= bracket4_Max && chargeable_income >= bracket4_Min){
@@ -227,13 +227,13 @@ int main() {
                 cin >> chargeable_income;
             }
         }else if(residential_status == "not a resident"){
-            if(chargeable_income <= bracket1_Max && chargeable_income >= bracket1_Min){
+            if(chargeable_income <= BRACKET1_MAX && chargeable_income >= BRACKET1_MIN){
                 tax = nonresidental_tax1;
 
-            }else if(chargeable_income <= bracket2_Max && chargeable_income >= bracket2_Min){
+            }else if(chargeable_income <= BRACKET2_MAX && chargeable_income >= BRACKET2_MIN){
                 tax = nonresidental_tax2;;
 
-            }else if(chargeable_income <= bracket3_Max && chargeable_income >= bracket3_Min){
+            }else if(chargeable_income <= BRACKET3_MAX && chargeable_income >= BRACKET3_MIN){
                 tax = nonresidental_tax3;
 
             }else if(chargeable_income <= bracket4_Max && chargeable_income >= bracket4_Min){
