@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstdlib>
+#include <cmath>
 
 using namespace std;
 
@@ -16,6 +18,16 @@ int check(){
     return input;
 }
 
+char answer(){
+    char equipment_rental;
+    cin >> equipment_rental;
+    while(equipment_rental != 'Y' && equipment_rental != 'y' && equipment_rental != 'N' && equipment_rental != 'n'){
+        cout << "Please only enter Y, y, N or n \n"; 
+        cin >> equipment_rental;
+    }
+    return equipment_rental;
+}
+
 int main(){
     int sessions; // sessions to 0 to avoid random assignment
     int rate_per_session;
@@ -24,6 +36,7 @@ int main(){
     double session_duration = 60; // duration for each session
     int customer_counter = 0; // track customer count
     int earning = 0;
+    int duration = sessions * session_duration;
 
     int sentinel; // user input to stop program
     const int QUIT = 11234883;
@@ -34,6 +47,7 @@ int main(){
         cout << "------------------------------------\n";
         cout << "Please enter the number of sessions you would like to take, the duration of each session is 60 mins;\n";
         sessions = check();
+        customer_counter++;
 
         const int SESSION_1MIN = 1;   // declare and initialize constants for session limits
         const int SESSION_1MAX = 5;   
@@ -55,16 +69,10 @@ int main(){
 
         if(sessions >= SESSION_1MIN && sessions < SESSION_2MIN)
         {
-            cout << "That will be $" << total_cost1 << " for the sessions and total duration will be "<< session_duration * sessions << " minutes.\n";
-            customer_counter++; 
+            cout << "That will be $" << total_cost1 << " for the sessions and total duration will be "<< duration << " minutes.\n";
 
             cout << "Would you like include equipment rental at $20 (Y/N)\n";
-            cin >> equipment_rental;
-
-            while(equipment_rental != 'Y' && equipment_rental != 'y' && equipment_rental != 'N' && equipment_rental != 'n'){
-                cout << "Please only enter Y, y, N or n \n"; 
-                cin >> equipment_rental;
-            }
+            equipment_rental = answer();
 
             if(equipment_rental == 'N' || equipment_rental == 'n' )
             {
@@ -78,16 +86,10 @@ int main(){
             }
         }
         else if(sessions >= SESSION_2MIN && sessions <= SESSION_2MAX ){
-            cout << "That will be $" << total_cost2 + (SESSION_1MAX * RATE_PER_SESSION1) << " for the sessions and the total duration will be "<< sessions * session_duration << " minutes.\n";
-            customer_counter++;    
+            cout << "That will be $" << total_cost2 + (SESSION_1MAX * RATE_PER_SESSION1) << " for the sessions and the total duration will be "<< duration << " minutes.\n";
 
             cout << "Would you like include equipment rental at $20 (Y/N)\n";
-            cin >> equipment_rental;
-
-            while(equipment_rental != 'Y' && equipment_rental != 'y' && equipment_rental != 'N' && equipment_rental != 'n'){
-                cout << "Please only enter Y, y, N or n \n"; 
-                cin >> equipment_rental;
-            }
+            equipment_rental = answer();
 
             if(equipment_rental == 'Y' || equipment_rental == 'y')
             {
@@ -101,16 +103,10 @@ int main(){
             }   
         }
         else if(sessions >= SESSION_3MIN){
-            cout << "That will be $" << total_cost3 + (SESSION_1MAX * RATE_PER_SESSION1) + (SESSION_1MAX * RATE_PER_SESSION2)  << " for the sessions and the total duration will be " << sessions * session_duration << " minutes.\n";
-            customer_counter++;
+            cout << "That will be $" << total_cost3 + (SESSION_1MAX * RATE_PER_SESSION1) + (SESSION_1MAX * RATE_PER_SESSION2)  << " for the sessions and the total duration will be " << duration << " minutes.\n";
 
             cout << "Would you like include equipment rental at $20 (Y/N)\n";
-            cin >> equipment_rental;
-
-            while(equipment_rental != 'Y' && equipment_rental != 'y' && equipment_rental != 'N' && equipment_rental != 'n'){
-                cout << "Please only enter Y, y, N or n \n"; 
-                cin >> equipment_rental;
-            }
+            equipment_rental = answer();
 
             if(equipment_rental == 'Y' || equipment_rental == 'y')
             {
@@ -123,7 +119,6 @@ int main(){
                 cout << "Total cost will be $" << total_cost3 + (SESSION_1MAX * RATE_PER_SESSION1) + (overlim2 * RATE_PER_SESSION2) <<  endl;
             }
         }
-
         cout << "Do you wish to leave this program? (Enter 11234883 to leave or any other key to restart program)\n";
         cin >> sentinel;
         if(sentinel == QUIT){
