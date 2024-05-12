@@ -4,11 +4,11 @@
 
 using namespace std;
 
-int check(){
+int check(){ // sessions input validation
     int input;
     cin >> input;
-    while(input < 1 || cin.fail())            
-        { // cin.fail
+    while(input < 1 || cin.fail())// cin.fail
+        { 
             cin.clear();
             string dummy;
             cin >> dummy;
@@ -18,7 +18,7 @@ int check(){
     return input;
 }
 
-char answer(){
+char answer(){ // y/n input validation
     char equipment_rental;
     cin >> equipment_rental;
     while(equipment_rental != 'Y' && equipment_rental != 'y' && equipment_rental != 'N' && equipment_rental != 'n'){
@@ -36,7 +36,7 @@ int main(){
     double session_duration = 60; // duration for each session
     int customer_counter = 0; // track customer count
     int earning = 0;
-    int duration = sessions * session_duration;
+    int duration = sessions * session_duration; // Total Duration of sessions
 
     int sentinel; // user input to stop program
     const int QUIT = 11234883;
