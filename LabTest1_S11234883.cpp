@@ -79,8 +79,8 @@ int main(){
         }
         else if(sessions >= SESSION_2MIN && sessions <= SESSION_2MAX ){
             cout << "That will be $" << total_cost2 + (SESSION_1MAX * RATE_PER_SESSION1) << " for the sessions and the total duration will be "<< sessions * session_duration << " minutes.\n";
-            customer_counter++;
-            
+            customer_counter++;    
+
             cout << "Would you like include equipment rental at $20 (Y/N)\n";
             cin >> equipment_rental;
 
