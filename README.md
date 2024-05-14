@@ -7,5 +7,8 @@
 - Lab tests 1 & 2 answered with comments.
 - Pass session questions solved.
 ## Learning Resources
-
+<div>
+<a href="https://www.learncpp.com" target="_blank"> Learn C++ </a>
+</div>
+<a href="https://roadmap.sh/cpp" target="_blank"> C++ Developer Roadmap </a>
 
