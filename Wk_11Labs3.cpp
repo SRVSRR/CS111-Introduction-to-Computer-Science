@@ -2,29 +2,29 @@
 
 using namespace std;
 
-void double_up(){
-    const int CAP = 100;
-    double values[CAP] = {1,2,3,4,5,6,7,8,9,10};
-    int multiple = 2;
-    const int MAX = 1000;
-    const int MIN = -1000;
-
-    for(int i = 0; i < CAP; i++){
-        cout << "Enter value between 1000 and -1000\n";
-        cin >> values[i];
-        if(values[i] > MAX ||values[i] < MIN){
-            break;
-        }
-        cout << "Old Array Value: " << values[i] << ". Numbers filled: "<< i+1 << endl;
-        values[i] = values[i] * multiple;
-        cout << "New Array Value: " << values[i] << endl;
+void double_up(double values[], int counter){
+    for(int i = 0; i < counter; i++){
+        values[i] = values[i] * 2;
     }
 }
 
 int main(){
-
-    double_up();
+    const int CAP = 100;
+    int multiple = 2;
+    int counter = 0;
+    int data = 0;
+    double values[CAP] = {1,2,3,4,5,6,7,8,9,10};
+    cout << "Enter num to continue or q to stop\n";
+    while(cin >> data){
+        if(counter < CAP){
+            values[counter] = data;
+            counter++; 
+        }
+    }
+    double_up(values, counter);
+    for(int i = 0; i < counter; i++){
+        cout << "Index " << i << ": " << values[i]<< endl;
+    }
     
-
     return 0;
 }
