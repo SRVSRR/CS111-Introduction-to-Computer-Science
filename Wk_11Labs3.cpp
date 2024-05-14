@@ -15,7 +15,7 @@ void double_up(){
         if(values[i] > MAX ||values[i] < MIN){
             break;
         }
-        cout << "Old Array Value: " << values[i] << "Numbers filled: "<< i+1 << endl;
+        cout << "Old Array Value: " << values[i] << ". Numbers filled: "<< i+1 << endl;
         values[i] = values[i] * multiple;
         cout << "New Array Value: " << values[i] << endl;
     }
@@ -24,9 +24,7 @@ void double_up(){
 int main(){
 
     double_up();
-
     
-
 
     return 0;
 }
