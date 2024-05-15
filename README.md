@@ -20,6 +20,9 @@ Once successfully compiled, you can execute the output file using:
 - <a href="https://www.learncpp.com" target="_blank">Learn C++ </a>
 - <a href="https://roadmap.sh/cpp" target="_blank">C++ Developer Roadmap </a>
 - <a href="https://youtu.be/MNeX4EGtR5Y?si=SFTMMYPIvfCzdNxR" target="_blank">C++ in 100 Seconds </a>
+- <a href="https://youtu.be/-TkoO8Z07hI?si=JcH613azWVTTj1ya" target="_blank">C++ Full Course for free ⚡️
+ </a>
+
 
 
 
