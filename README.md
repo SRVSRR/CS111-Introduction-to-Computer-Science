@@ -8,9 +8,18 @@
 - Pass session questions solved.
 - 13 files with over 2500 lines of C++ code.
 ## Getting Started
-You'll have to fork 
+You'll have to firstly fork and clone the repo. Make sure you have the G++ compiler installed. Then, choose the program you want to run and compile it:
+```
+g++ -o <output_file_name> <name_of_files(s)_you_want_to_run>
+```
+Once successfully compiled, you can execute the output file using:
+```
+./<output_file_name>
+```
 ## Learning Resources
 - <a href="https://www.learncpp.com" target="_blank">Learn C++ </a>
 - <a href="https://roadmap.sh/cpp" target="_blank">C++ Developer Roadmap </a>
+- <a href="https://youtu.be/MNeX4EGtR5Y?si=SFTMMYPIvfCzdNxR" target="_blank">C++ in 100 Seconds </a>
+
 
 
