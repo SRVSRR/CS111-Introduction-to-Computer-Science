@@ -7,7 +7,10 @@
 - Lab tests 1 & 2 answered with comments.
 - Pass session questions solved.
 - 13 files with over 2500 lines of C++ code.
+## Getting Started
+You'll have to fork 
 ## Learning Resources
 - <a href="https://www.learncpp.com" target="_blank">Learn C++ </a>
 - <a href="https://roadmap.sh/cpp" target="_blank">C++ Developer Roadmap </a>
+
 
