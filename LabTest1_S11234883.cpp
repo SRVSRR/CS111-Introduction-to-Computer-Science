@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int check(){ // sessions input validation
+int input_check(){ // sessions input validation
     int input;
     cin >> input;
     while(input < 1 || cin.fail())// cin.fail
@@ -18,7 +18,7 @@ int check(){ // sessions input validation
     return input;
 }
 
-char answer(){ // y/n input validation
+char Equipment_Rental_Ans(){ // y/n input validation
     char equipment_rental;
     cin >> equipment_rental;
     while(equipment_rental != 'Y' && equipment_rental != 'y' && equipment_rental != 'N' && equipment_rental != 'n'){
@@ -46,7 +46,7 @@ int main(){
         cout << "Welcome to Fitness Training Services\n";
         cout << "------------------------------------\n";
         cout << "Please enter the number of sessions you would like to take, the duration of each session is 60 mins;\n";
-        sessions = check();
+        sessions = input_check();
         customer_counter++;
 
         const int SESSION_1MIN = 1;   // declare and initialize constants for session limits
@@ -72,7 +72,7 @@ int main(){
             cout << "That will be $" << total_cost1 << " for the sessions and total duration will be "<< duration << " minutes.\n";
 
             cout << "Would you like include equipment rental at $20 (Y/N)\n";
-            equipment_rental = answer();
+            equipment_rental = Equipment_Rental_Ans();
 
             if(equipment_rental == 'N' || equipment_rental == 'n' )
             {
@@ -89,7 +89,7 @@ int main(){
             cout << "That will be $" << total_cost2 + (SESSION_1MAX * RATE_PER_SESSION1) << " for the sessions and the total duration will be "<< duration << " minutes.\n";
 
             cout << "Would you like include equipment rental at $20 (Y/N)\n";
-            equipment_rental = answer();
+            equipment_rental = Equipment_Rental_Ans();
 
             if(equipment_rental == 'Y' || equipment_rental == 'y')
             {
@@ -106,7 +106,7 @@ int main(){
             cout << "That will be $" << total_cost3 + (SESSION_1MAX * RATE_PER_SESSION1) + (SESSION_1MAX * RATE_PER_SESSION2)  << " for the sessions and the total duration will be " << duration << " minutes.\n";
 
             cout << "Would you like include equipment rental at $20 (Y/N)\n";
-            equipment_rental = answer();
+            equipment_rental = Equipment_Rental_Ans();
 
             if(equipment_rental == 'Y' || equipment_rental == 'y')
             {
