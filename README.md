@@ -1,4 +1,4 @@
-# CS111: Introduction to Computing Science Course 2024 Semester 1
+# CS111: Introduction to Computing Science
 ![SRVSRR](https://github.com/SRVSRR/CS111/assets/135499024/57bca3d3-2a84-47af-b895-99e6d6f90759)
 ## Contents
 - Course updated to 2024.
