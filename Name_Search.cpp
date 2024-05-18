@@ -3,7 +3,6 @@
 using namespace std;
 
 int main(){
-
 const int CAP = 50;
 string names[CAP] = {
     "John", "Mary", "James", "Patricia", "Robert", "Jennifer", 
