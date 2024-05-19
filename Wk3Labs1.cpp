@@ -13,7 +13,5 @@ int main(){
     int z = x * y * (y+x);
     cout << "Z is equal to " << z << endl;
     
-
-
     return 0;
 }
