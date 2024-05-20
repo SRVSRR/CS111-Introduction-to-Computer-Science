@@ -18,24 +18,27 @@ string names[CAP] = {
 string query;
 char sentinel;
 int counter = 0;
+bool found;
 
 while(sentinel != 'q'){
     cout << "Enter Name" << endl;
     cin >> query;
-    for(int i = 0; i < 1; i++){
+    found = false;
+    int i = 0;
+    for(int i = 0; i < CAP; i++){
         if(query == names[i]){
-            cout << "The name " << query << " does exist and location is " << i + 1 << endl;
+            cout << "The name " << query << " does exist at position " << i+1 << endl;
             counter++;
-        }else {
-            cout << "The name " << query << " not does exist" << endl;
+            found = true;
         }
+    }
+    if(!found){
+        cout << "The name " << query << " does not exist" << endl;
     }
     cout << "Do you wish to quit? Enter q to quit" << endl;
     cin >> sentinel;
 }
-
 cout << "You have left the loop and guessed " << counter << " name correct" << endl;
-
 
 return 0;
 }
