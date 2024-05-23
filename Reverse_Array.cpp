@@ -2,26 +2,27 @@
 
 using namespace std;
 
-void reverse(int values[], int CAP){
-    int i = 0;
-    int j = 4; 
-    while (i < j) {
-        int temp = values[i];
-        values[i] = values[j];
-        values[j] = temp;
-        i++;
-        j--;
+void reverse(int values[], int SIZE, int newarray[]){
+    int temp = values[0];
+    int i = 4;
+    int y = 0;
+    while(SIZE > y){
+        newarray[y] = values[i];
+        y++;
+        i--;
     }
+    newarray[SIZE - 1] = temp;
 }
 
 int main(){
     const int CAP = 5;
     int values[CAP] = {1, 2, 3, 4, 5}; 
+    int newarray[CAP];
     
-    reverse(values, CAP);
+    reverse(values, CAP, newarray);
 
     for(int i = 0; i < CAP; i++){
-        cout << values[i];
+        cout << newarray[i];
     }
 
     return 0;
