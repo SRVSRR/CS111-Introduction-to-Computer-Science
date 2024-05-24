@@ -18,7 +18,7 @@ int main(){
     
     reverse(values, CAP);
 
-    for(int i = 0; i < CAP; i++){
+    for(int i = 0; i < 6; i++){
         cout << values[i];
     }
 
