@@ -45,7 +45,7 @@ int main(){
     cout << "+++++++++++++++++++++++++++++++++++++" << endl;
 
     int total_vehicles = 0;
-    int total_cost = 0;
+    int total_pricing = 0;
 
     while(quit != LOWERCASE_SENTINEL || quit != UPPERCASE_SENTINEL){
 
@@ -95,6 +95,8 @@ int main(){
 
         cout << "The number of vehicles ordered are :" << num_vehicles << endl;
         cout << "Total cost for " << num_vehicles << " items will be $" << total_cost << endl;
+        total_pricing += total_cost;
+        total_vehicles += num_vehicles;
 
         // input for sentinel loop which exits the loop
         cout << "If you wish to leave the program enter q or any other letter to restart" << endl;
@@ -104,9 +106,12 @@ int main(){
         }
     }
 
-
     // program exited message
     cout << "+++++++++++++++++++++++++++++++++++++" << endl;
     cout << "|     You have left the program     |" << endl;
     cout << "+++++++++++++++++++++++++++++++++++++" << endl;
+
+    cout << "Total vehicles ordered: " << total_vehicles << endl;
+    cout << "Total cost for vehicles: " << total_pricing << endl;
+
 }
