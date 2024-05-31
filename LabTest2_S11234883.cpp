@@ -44,6 +44,9 @@ int main(){
     cout << "| Welcome To Trinidy Car Dealership |" << endl;
     cout << "+++++++++++++++++++++++++++++++++++++" << endl;
 
+    int total_vehicles = 0;
+    int total_cost = 0;
+
     while(quit != LOWERCASE_SENTINEL || quit != UPPERCASE_SENTINEL){
 
         int destination_choice;
@@ -100,6 +103,8 @@ int main(){
             break;
         }
     }
+
+
     // program exited message
     cout << "+++++++++++++++++++++++++++++++++++++" << endl;
     cout << "|     You have left the program     |" << endl;
