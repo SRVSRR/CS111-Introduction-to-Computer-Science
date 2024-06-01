@@ -1,0 +1,27 @@
+
+The List of Students Sorted by Total Marks:
+ID#            Name           Maths          Science        English        Total          
+S123005        Eve            79.00          84.50          88.00          251.50         
+S123001        Alice          78.50          82.00          91.50          252.00         
+S123008        Hannah         86.50          79.00          88.50          254.00         
+S123006        Frank          80.00          90.00          85.50          255.50         
+S123002        Bob            88.00          77.50          93.00          258.50         
+S123007        Grace          77.50          89.00          92.00          258.50         
+S123004        David          92.50          81.00          86.00          259.50         
+S123003        Charlie        85.00          89.50          90.00          264.50         
+
+Averages:
+Maths: 83.38
+Science: 84.06
+English: 89.31
+Total: 256.75
+
+Student with Highest Mark:
+ID#: S123003
+Name: Charlie
+Total Marks: 264.50
+
+Student with Lowest Mark:
+ID#: S123005
+Name: Eve
+Total Marks: 251.50
