@@ -10,18 +10,19 @@ S123007        Grace          77.50          89.00          92.00          258.5
 S123004        David          92.50          81.00          86.00          259.50         
 S123003        Charlie        85.00          89.50          90.00          264.50         
 
+
 Averages:
-Maths: 83.38
-Science: 84.06
-English: 89.31
-Total: 256.75
+Maths: 83.4
+Science: 84.1
+English: 89.3
+Total: 256.8
 
 Student with Highest Mark:
 ID#: S123003
 Name: Charlie
-Total Marks: 264.50
+Total Marks: 264.5
 
 Student with Lowest Mark:
 ID#: S123005
 Name: Eve
-Total Marks: 251.50
+Total Marks: 251.5

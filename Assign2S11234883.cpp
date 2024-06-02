@@ -386,6 +386,8 @@ void write_report(string file_name, int rows, string student_id[], string studen
             write_file << left << setw(15) << total_marks[i] << endl;
         }
 
+		write_file << fixed << setprecision(1) << endl;
+
 		// Write averages
         write_file << "\nAverages:\n";
         write_file << "Maths: "  << avg_maths << "\n";
