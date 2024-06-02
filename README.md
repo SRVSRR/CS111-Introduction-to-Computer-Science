@@ -6,7 +6,7 @@
 - Assignment 1 & 2 with documentation.
 - Lab tests 1 & 2 answered with comments.
 - Pass session questions solved.
-- 65 files with over 4000 lines of C++ code.
+- 65 files with over 5000 lines of C++ code.
 ## Getting Started
 You'll have to firstly fork and clone the repo. Make sure you have the G++ compiler installed. Then, choose the program you want to run and compile it:
 ```
