@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 // Question from 2023 CS111 Final Paper
 // Find for straight columns
 
@@ -35,5 +36,37 @@ int main(){
         j--;
     }
     cout << "Anti-Diagonal Sum = " << anti_diagonal_sum << endl;
+
+    // Anti Diagonal Sum 2
+    int anti_diagonal_sum2 = 0;
+    int b = 0;
+    for(int i = 4; i >= 0; i--)
+    {
+        cout << values[b][i] << " ";
+        anti_diagonal_sum2 += values[b][i];
+        b++;
+    }
+    cout << "Anti-Diagonal Sum = " << anti_diagonal_sum2 << endl;
+    
+    cout << endl;
+
+    for(int k = 0; k < row; k++){
+        int row_total = 0;
+        for(int m = 0; m < columns;m++){
+           cout << setw(4) << values[k][m];
+           row_total += values[k][m];
+        }
+        cout << "= " << row_total;
+        cout << endl;
+    }
+
+    for(int n = 0; n < columns; n++){
+        int col_total = 0;
+        for(int k = 0; k < row; k++){
+            col_total += values[k][n];
+        }
+        cout << setw(4) << col_total << " ";
+
+    }
     return 0;
 }
