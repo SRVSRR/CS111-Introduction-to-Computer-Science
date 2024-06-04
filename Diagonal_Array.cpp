@@ -1,7 +1,6 @@
 #include <iostream>
 #include <iomanip>
 // Question from 2023 CS111 Final Paper
-// Find for straight columns
 
 using namespace std;
 
