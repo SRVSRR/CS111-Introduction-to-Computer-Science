@@ -21,4 +21,5 @@ int main(){
 
     cout << average << endl;    
     return 0;
+
 }
