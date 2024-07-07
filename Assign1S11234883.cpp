@@ -4,10 +4,6 @@ ID: S11234883
 Course: Bachelors of Software Engineering.
 Tutorial Group: ITS 14, Tuesday 3:00PM - 5:00PM.
 
-Issue List:
-Make const variables uppercase
-Have equations inside if statement to reduce process load
-*/
 #include <iostream>
 #include <iomanip>
 
