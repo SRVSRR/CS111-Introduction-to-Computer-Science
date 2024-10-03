@@ -3,14 +3,7 @@
 
 using namespace std;
 
-double avg(int value[], int SIZE){
-    double sum = 0;
-    for(int i = 0; i < SIZE; i++){
-        sum+=value[i];
-    }
-    double average = sum/SIZE;
-    return average;
-}
+double avg(int value[], int SIZE);
 
 int main(){
     cout << fixed << setprecision(1);
@@ -22,4 +15,13 @@ int main(){
     cout << average << endl;    
     return 0;
 
+}
+
+double avg(int value[], int SIZE){
+    double sum = 0;
+    for(int i = 0; i < SIZE; i++){
+        sum+=value[i];
+    }
+    double average = sum/SIZE;
+    return average;
 }
