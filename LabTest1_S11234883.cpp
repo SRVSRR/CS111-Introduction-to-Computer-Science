@@ -28,6 +28,30 @@ char Equipment_Rental_Ans(){ // y/n input validation
     return equipment_rental;
 }
 
+// Function to start or quit the program
+void program_start_quit(bool& continue_executing)
+{
+    string userDecision;
+    cout << "Enter S to start or Q to quit" << endl;
+    cin >> userDecision;
+    
+    while(userDecision != "S" && userDecision != "s" && userDecision != "Q" && userDecision != "q") {
+        cin.clear();
+        cout << "ERROR! Invalid input detected." << endl;
+        cout << "Please enter either \"S\" or \"Q\" only." << endl;
+        cin >> userDecision;
+    }
+    
+    if (userDecision == "S" || userDecision == "s")
+	{
+		continue_executing = true;
+	}
+	else if (userDecision == "Q" || userDecision == "q")
+	{
+		continue_executing = false;
+	}
+}
+
 int main(){
     int sessions; // sessions to 0 to avoid random assignment
     int rate_per_session;
@@ -41,7 +65,11 @@ int main(){
     int sentinel; // user input to stop program
     const int QUIT = 11234883;
 
-    while(sentinel != QUIT){
+    bool continue_executing = true;
+
+    program_start_quit(continue_executing);
+
+    while(continue_executing){
         cout << "------------------------------------\n";
         cout << "Welcome to Fitness Training Services\n";
         cout << "------------------------------------\n";

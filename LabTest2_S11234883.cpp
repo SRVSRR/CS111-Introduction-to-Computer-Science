@@ -35,6 +35,30 @@ int vehicleNum_validation(){
     return vehicle_num;
 }
 
+// Function to start or quit the program
+void program_start_quit(bool& continue_executing)
+{
+    string userDecision;
+    cout << "Enter S to start or Q to quit" << endl;
+    cin >> userDecision;
+    
+    while(userDecision != "S" && userDecision != "s" && userDecision != "Q" && userDecision != "q") {
+        cin.clear();
+        cout << "ERROR! Invalid input detected." << endl;
+        cout << "Please enter either \"S\" or \"Q\" only." << endl;
+        cin >> userDecision;
+    }
+    
+    if (userDecision == "S" || userDecision == "s")
+	{
+		continue_executing = true;
+	}
+	else if (userDecision == "Q" || userDecision == "q")
+	{
+		continue_executing = false;
+	}
+}
+
 int main(){
     const char LOWERCASE_SENTINEL = 'q';
     const char UPPERCASE_SENTINEL = 'Q';
@@ -47,7 +71,10 @@ int main(){
     int total_vehicles = 0;
     int total_pricing = 0;
 
-    while(quit != LOWERCASE_SENTINEL || quit != UPPERCASE_SENTINEL){
+    bool continue_executing = true;
+    program_start_quit(continue_executing);
+
+    while(continue_executing){
 
         int destination_choice;
         int num_vehicles;
