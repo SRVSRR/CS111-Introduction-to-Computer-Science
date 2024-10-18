@@ -14,7 +14,6 @@ int main(){
 
     cout << average << endl;    
     return 0;
-
 }
 
 double avg(int value[], int SIZE){
