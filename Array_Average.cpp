@@ -13,6 +13,7 @@ int main(){
     double average = avg(values, SIZE);
 
     cout << average << endl;    
+
     return 0;
 }
 
