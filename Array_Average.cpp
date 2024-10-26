@@ -22,6 +22,7 @@ double avg(int value[], int SIZE){
     for(int i = 0; i < SIZE; i++){
         sum+=value[i];
     }
+
     double average = sum/SIZE;
     return average;
 }
